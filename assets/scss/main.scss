@@ -1,0 +1,140 @@
+@import 'abstracts/variables';
+@import 'base/reset';
+@import 'base/typography';
+
+
+.container {
+    display: grid;
+    margin: auto;
+}
+
+.container__clientes_list {
+    display: flex;
+    justify-content: flex-start;
+
+    width: 40vw;
+}
+
+.form__group {
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.form__field {
+    border: 0;
+    border-bottom: 2px solid $grey;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $grey;
+}
+
+.form__field:focus {
+    ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary;
+        font-weight:700;    
+    }
+
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+}
+
+
+.clientes__poteciais {
+    background: linear-gradient(to left top, $primary, $secondary);
+    width: 20vw;
+    border: 10px solid $primary;
+    border-radius: 15px 0px 0px 15px;
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+
+    h2 {
+        padding: 15px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+
+        width: 100%;
+        position: relative;
+
+        li {
+            cursor: pointer;
+            padding: .6em;
+            border-top: 1px solid rgba(255,255,255,0.2);
+
+            &:hover {
+                background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            }
+        }
+    }
+}
+
+.active {
+	background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+
+.filter__checkbox {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    text-align: left;    
+}
+
+.cliente__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 20vw;
+    background: linear-gradient(to left top, $secondary, $primary);
+    border: 10px solid $primary;
+    border-radius: 0px 15px 15px 0px;
+    text-align: center;
+}
+
+.cliente__potencial {
+  
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+}
+
+.cliente__potencial_item {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    text-align: left;
+}
